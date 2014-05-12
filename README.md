@@ -1,6 +1,8 @@
 angular-image-crop
 ============
 
+### Demo at <https://coolaj86.github.com/angular-image-crop>
+
 This is a demo of jquery's jcrop wrapped in an angular directive and controller.
 
 * `/app/scripts/profile-pic.js`
