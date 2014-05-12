@@ -49,3 +49,4 @@ Similar Work
 
 * [Jcrop](http://deepliquid.com/content/Jcrop.html) (jQuery) - I'm using this under-the-hood until I have the time to do it myself in "pure Angular"
 * [imgAreaSelect](http://odyniec.net/projects/imgareaselect/) (jQuery)
+* [Angular Jcrop Directive](https://stackoverflow.com/questions/14504393/how-to-fix-this-angularjs-jcrop-directive/23612063#23612063) I probably used parts of this in my implementation.
