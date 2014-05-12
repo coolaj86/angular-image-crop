@@ -1,0 +1,62 @@
+//.navbar-fixed-top
+.navbar.navbar-default
+  .container
+    .navbar-header
+      a.navbar-brand(href='/') Angular Template
+      button.navbar-toggle(type='button', ng-init="navCollapsed = true", ng-click="navCollapsed = !navCollapsed")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    #navbar-main.navbar-collapse.collapse(ng-class="!navCollapsed && 'in'")
+      ul.nav.navbar-nav
+        //-li.dropdown
+          a#themes.dropdown-toggle(data-toggle='dropdown', href='#')
+            | Themes
+            span.caret
+          ul.dropdown-menu(aria-labelledby='themes')
+            li
+              a(href='../default/') Default
+            li.divider
+            li
+              a(href='../amelia/') Amelia
+            li
+              a(href='../cerulean/') Cerulean
+            li
+              a(href='../cosmo/') Cosmo
+            li
+              a(href='../cyborg/') Cyborg
+            li
+              a(href='../flatly/') Flatly
+            li
+              a(href='../journal/') Journal
+            li
+              a(href='../lumen/') Lumen
+            li
+              a(href='../readable/') Readable
+            li
+              a(href='../simplex/') Simplex
+            li
+              a(href='../slate/') Slate
+            li
+              a(href='../spacelab/') Spacelab
+            li
+              a(href='../superhero/') Superhero
+            li
+              a(href='../united/') United
+            li
+              a(href='../yeti/') Yeti
+        li(ng-repeat="tab in N.tabs", ng-class="{ active: tab.active }")
+          a(ng-href="{{tab.href}}") {{ tab.title }}
+      ul.nav.navbar-nav.navbar-right
+        li(ng-show="!N.session")
+          a(href="#") Login
+        li.dropdown(ng-show="N.session")
+          a#account.dropdown-toggle(data-toggle='dropdown', href='#')
+            | Account
+            span.caret
+          ul.dropdown-menu(aria-labelledby='account')
+            li
+              a(href="", ui-sref="account") Settings
+            li.divider
+            li
+              a(href="", ng-click="N.logout()") Logout

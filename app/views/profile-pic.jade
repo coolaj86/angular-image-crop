@@ -1,0 +1,26 @@
+h3 Profile Pic
+//img.aj-crop(ng-src="{{ P.imageSrc }}")
+input(
+  type="file"
+, accept="image/*"
+, capture="camera"
+, aj-file-select="P.onFileSelect($files)"
+, aj-change="P.getFile($files)"
+, aj-model="P.file"
+)
+
+h3 Crop
+img-cropped(
+  src="imageSrc"
+, selected="selected(cords)"
+)
+
+h3 Div Preview
+  div#cropped-image(
+    ng-show="cropped"
+  , ng-style="{ width: P.picWidth + 'px', height: P.picHeight + 'px', overflow: 'hidden' }"
+  )
+    img#preview(ng-src="{{ P.imageSrc }}")
+
+h4 Canvas Preview
+.canvas-preview

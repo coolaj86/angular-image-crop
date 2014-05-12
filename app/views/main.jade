@@ -1,0 +1,57 @@
+.container
+  .row
+    .col-sm-12
+      h2 You gotsta know your house!
+  //-.jumbotron
+    h1 &apos;Allo&comma; &apos;Allo&excl;
+    p.lead
+      img(src='images/yeoman.png', alt='I"m Yeoman')
+      br
+      | Always a pleasure scaffolding your apps&period;
+    p
+      a.btn.btn-lg.btn-success(ng-href='#') Splendid&excl;
+
+  .row.marketing
+    .col-sm-12
+      div(ng-if="!M.current && !M.results") 
+        button.btn.btn-primary(ng-click="M.startQuiz()", type="button") Find Your House
+
+      div(ng-if="M.current")
+        span {{ M.current.total - M.current.remaining }} of {{ M.current.total }}
+        strong  Which suits you best?
+        span
+          |  (#
+          | {{ M.current.number }})
+        div
+          p(ng-repeat="choice in M.current.choices")
+            button.btn.btn-primary(ng-click="M.respond($index)", type="button") {{ $index + 1 }}
+            span  {{ choice.response }}
+      div(ng-if="M.result")
+        .section
+          h3
+            span Your house is
+            strong  {{ M.result }}
+
+          p Differential Confidence: {{ M.confidence1 }}%
+          p Average Confidence: {{ M.confidence2 }}%
+
+          div(ng-repeat="outcome in M.outcomes")
+            p(ng-if="M.result === outcome.name").
+              {{ outcome.message }}
+
+        .section
+          p Debug Totals:
+          pre {{ M.results | json }}
+
+          p Debug Responses:
+          pre {{ M.responses | json }}
+
+        .section
+          h3 More
+          p.
+            You're a Harry Potter fan. How exciting!
+
+        .section
+          h3 Welcome
+          p.
+            Welcome to your house. Way to be!
