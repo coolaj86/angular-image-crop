@@ -5,7 +5,8 @@ angular.module('profilepicApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'aj.crop'
 ])
   .config(function ($stateProvider, $urlRouterProvider) {
     var nav
@@ -17,12 +18,12 @@ angular.module('profilepicApp', [
     // doesn't get properly mangled by ng-min
     // See https://github.com/yeoman/generator-angular#minification-safe
     nav = {
-      templateUrl: '/views/nav.html'
+      templateUrl: 'views/nav.html'
     , controller: 'NavCtrl as N'
     };
 
     footer = {
-      templateUrl: '/views/footer.html'
+      templateUrl: 'views/footer.html'
     };
 
     //$locationProvider.html5Mode(true);

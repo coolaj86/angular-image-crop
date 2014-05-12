@@ -1,9 +1,10 @@
 'use strict';
 
-var bounds = {};
-
-angular.module('profilepicApp')
+angular.module('aj.crop', [])
   .directive('imgCropped', function($window) {
+    var bounds = {}
+      ;
+
     return {
       restrict: 'E',
       replace: true,
@@ -36,6 +37,8 @@ angular.module('profilepicApp')
             { trackDocument: true
             , onSelect: function(cords) {
                 scope.$apply(function() {
+                  cords.bx = bounds.x;
+                  cords.by = bounds.y;
                   scope.selected({cords: cords});
                 });
               }
@@ -188,7 +191,6 @@ angular.module('profilepicApp')
 
       console.log('[cords]', scope.picWidth / scope.picHeight);
       console.log(cords);
-      console.log(bounds);
       $scope.cropped = true;
 
       var rx = scope.picWidth / cords.w
@@ -207,8 +209,8 @@ angular.module('profilepicApp')
 
 
       $window.jQuery('img#preview').css({
-        width: Math.round(rx * bounds.x) + 'px',
-        height: Math.round(ry * bounds.y) + 'px',
+        width: Math.round(rx * cords.bx) + 'px',
+        height: Math.round(ry * cords.by) + 'px',
         marginLeft: '-' + Math.round(rx * cords.x) + 'px',
         marginTop: '-' + Math.round(ry * cords.y) + 'px'
       });
