@@ -47,7 +47,7 @@ grunt serve
 Similar Work
 ===
 
-* [cropUploader](http://orbintsoft.azurewebsites.net/Demo/cropUploader/) If there's an actual repo and directive for this somewhere, it's probably a better tool to use.
+* [cropUploader](http://orbintsoft.azurewebsites.net/Demo/cropUploader/) With a few tweaks to get this working on mobile, this would be an ideal solution.
 
 * [Jcrop](http://deepliquid.com/content/Jcrop.html) (jQuery) - I'm using this under-the-hood until I have the time to do it myself in "pure Angular"
 * [imgAreaSelect](http://odyniec.net/projects/imgareaselect/) (jQuery)
