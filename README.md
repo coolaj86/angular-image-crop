@@ -5,11 +5,14 @@ angular-image-crop
 
 This is a demo of jquery's jcrop wrapped in an angular directive and controller.
 
+* [`/app/scripts/app.js`](https://github.com/coolaj86/angular-image-crop/blob/master/app/scripts/app.js)
 * [`/app/scripts/controller/profile-pic.js`](https://github.com/coolaj86/angular-image-crop/blob/master/app/scripts/controllers/profile-pic.js)
 * [`/app/styles/profile-pic.css`](https://github.com/coolaj86/angular-image-crop/blob/master/app/styles/profile-pic.css)
 * [`/app/views/profile-pic.jade`](https://github.com/coolaj86/angular-image-crop/blob/master/app/views/profile-pic.jade)
 
 It's not complete, but you can test it out.
+
+The directive is provided in the module `aj.crop`.
 
 Install
 ===
