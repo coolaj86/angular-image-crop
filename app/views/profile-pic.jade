@@ -4,10 +4,10 @@ input(
   type="file"
 , accept="image/*"
 , capture="camera"
-, aj-file-select="P.onFileSelect($files)"
 , aj-change="P.getFile($files)"
 , aj-model="P.file"
 )
+//- TODO , aj-file-select="P.onFileSelect($files)"
 
 h3 Crop
 img-cropped(
