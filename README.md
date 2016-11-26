@@ -13,6 +13,8 @@ angular-image-crop
 
 ### Demo at <https://coolaj86.github.com/angular-image-crop>
 
+### Only supports IE 10+
+
 This is a demo of jquery's jcrop wrapped in an angular directive and controller.
 
 * [`/app/scripts/app.js`](https://github.com/coolaj86/angular-image-crop/blob/master/app/scripts/app.js)
